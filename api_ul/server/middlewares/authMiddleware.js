@@ -1,5 +1,3 @@
-//DONE DON'T TOUCH THIS FILE!!!!! je touch krbe tar duto baba
-
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel.js");
 

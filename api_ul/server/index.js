@@ -16,8 +16,6 @@ const { error } = require("console");
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
-// app.set("trust proxy", 1);
-// Connect to the database
 
 // Security middleware
 app.use(helmet());
@@ -43,15 +41,6 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static files
-// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-
-// Routes
-// app.use("/api/files", fileRoutes);
-// app.use("/api/ml", mlRoutes);
-
-// Error handling middleware
-// app.use(errorHandler);
 
 //AuthRoutes
 app.use("/api/auth", authRoutes);
@@ -59,7 +48,7 @@ app.use("/api/auth", authRoutes);
 // File upload routes
 app.use("/api", fileRoutes);
 
-// Machine learning routes
+// ML routes
 app.use("/api", mlRoutes);
 
 //Error Handler

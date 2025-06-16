@@ -1,14 +1,10 @@
-//DONE DON'T TOUCH THIS FILE!!!!! je touch krbe tar duto baba -->(AMI MAYUKH BOLCHI. AMI KINTU JORE JORE TOUCH KORECHI)
-
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 const File = require("../models/fileModel");
 const generateToken = require("../lib/utils");
 
-// @desc Register a new user
-// @route POST /api/auth/register
-// @access Public
+
 const registerUser = async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
@@ -54,9 +50,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-// @desc Authenticate user
-// @route POST /api/auth/login
-// @access Public
+
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -94,9 +88,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-// @desc Get logged-in user info
-// @route GET /api/auth/me
-// @access Private
+
 const getMe = async (req, res) => {
   try {
     // req.user should be set by protect middleware
@@ -117,9 +109,6 @@ const getMe = async (req, res) => {
   }
 };
 
-// @desc Delete user account and associated files
-// @route.DELETE /api/auth/delete
-// @access Private
 const deleteUser = async (req, res) => {
   try {
     // req.user should be set by protect middleware
@@ -141,20 +130,6 @@ const deleteUser = async (req, res) => {
   }
 };
 
-//new logout FOR WHAT IDK
-// const logoutUser = async (req, res) => {
-//   try {
-//     if (!req.user) {
-//       return res.status(401).json({ message: "Not authenticated" });
-//     }
-//     // Optional: Implement token blacklisting or session cleanup if needed
-//     console.log(`User ${req.user.email} logged out`);
-//     res.status(200).json({ message: "Logged out successfully" });
-//   } catch (error) {
-//     console.error("Logout error:", error);
-//     res.status(500).json({ message: "Server error" });
-//   }
-// };
 
 module.exports = {
   registerUser,
