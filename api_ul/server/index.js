@@ -33,7 +33,7 @@ app.use(morgan("dev"));
 // Enable CORS
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:5173", // Adjust this to your frontend URL
   })
 );
 
