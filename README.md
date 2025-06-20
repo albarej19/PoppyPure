@@ -1,7 +1,7 @@
 # Final Year Project: Adulteration Detection Platform
 
 ## Overview
-This project is a full-stack web application for detecting adulteration in samples using machine learning. It includes:
+This project is a full-stack web application for detecting adulteration in poppy seeds using machine learning. It includes:
 - A React + Vite frontend
 - A Node.js/Express backend
 - A Python-based ML model (with a Jupyter Notebook: `project-main.ipynb`)
